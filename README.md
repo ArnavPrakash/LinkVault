@@ -13,7 +13,6 @@ A modern, secure LinkVault-like application built with React, Node.js, and Expre
 - **Password Protection**: Secure pastes with optional password
 - **One-Time View**: Links that self-destruct after first view
 - **View Count Limits**: Set maximum number of views before deletion
-- **Manual Delete**: Users can manually delete their pastes
 - **Real-time Stats**: View count and expiry countdown
 - **Responsive Design**: Works seamlessly on desktop and mobile
 - **Error Handling**: Comprehensive error handling with user-friendly messages
@@ -21,9 +20,9 @@ A modern, secure LinkVault-like application built with React, Node.js, and Expre
 
 ## 📋 Database Schema
 
-### Paste Model (In-Memory W.I.P)
+### Paste Model
 
-```javascript
+```
 {
   id: String,              // Unique identifier (nanoid, 11 chars)
   type: String,            // 'text' or 'file'
@@ -114,12 +113,3 @@ cd frontend
 npm run build
 npm run preview
 ```
-
-## Current Limitations
-1. **In-Memory Storage**: Data lost on server restart
-2. **No Authentication**: Anyone can upload
-3. **No File Type Restrictions**: All file types accepted
-4. **10MB File Limit**: Hard-coded limit
-5. **No Encryption**: Files stored in plaintext on Cloudinary
-6. **No Analytics**: No usage tracking
-7. **Single Server**: No horizontal scaling
